@@ -7,7 +7,7 @@ const Fetchjocke = () => {
   // Fetch a joke from the backend
   const fetchJoke = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/jokes");
+      const response = await fetch("https://my-friend-backend.vercel.app/api/jokes");
       const data = await response.json();
       setJoke(data.joke);
     } catch (error) {
