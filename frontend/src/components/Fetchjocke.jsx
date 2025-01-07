@@ -18,7 +18,7 @@ const Fetchjocke = () => {
   // Fetch cartoon image for a specific reaction
   const fetchCartoon = async (reaction) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/cartoon/${reaction}`);
+      const response = await fetch(`https://my-friend-backend.vercel.app/${reaction}`);
       const data = await response.json();
       setCartoonImage(data.imageUrl);
     } catch (error) {

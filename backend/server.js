@@ -6,7 +6,12 @@ const app = express();
 const PORT = 5000;
 
 // Middleware
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+    origin: 'https://my-friend-frontend.vercel.app',  // Your actual frontend deployment URL
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true,
+}));
 app.use(express.static("public")); // To serve static cartoon images
 app.use(express.json());
 
